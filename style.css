@@ -1,0 +1,28 @@
+* {
+}
+        
+body {
+}
+
+h1{
+    color: red;
+}
+
+p{
+    margin: 5px;
+}
+
+.esittely{
+    border-radius: 10px;
+    background-image:linear-gradient(to top, rgb(251, 247, 247), rgb(226, 226, 234));
+    box-shadow: 5px 5px 5px grey;
+    padding: 10px;
+    min-height: 250px;
+}
+
+.esittely-kuva{
+    width: 200px;
+    height: 200px;
+    border: 1px solid grey;
+    float: left;
+}
