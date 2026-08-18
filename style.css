@@ -1,23 +1,85 @@
 * {
-}
-        
-body {
+    margin: 0;
+    font-family:'Segoe UI';
 }
 
 h1{
-    color: red;
+    margin: 10px;
 }
 
 p{
-    margin: 5px;
+    margin: 10px;
+}
+
+header{
+    background-color: darkblue;
+    padding: 10px;
+}
+
+nav{
+    float: right;
+}
+
+nav li{
+    float: left;
+    list-style-type: none;
+    margin-right: 15px;
+}
+
+nav a{
+    text-decoration: none;
+    color: lightblue;
+}
+
+nav a:hover{
+    color:white;
+}
+
+nav a:active{
+    color: yellow;
+}
+
+nav li:last-child{
+    margin-right: 0;
+}
+
+section{
+    padding: 10px;
+    width: 1000px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer{
+    background-color: darkblue;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+footer p{
+    text-align: center;
+}
+
+.page-name{
+    color: white;
+}
+
+.absolute-img{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 125px;
+    right: 180px;
 }
 
 .esittely{
     border-radius: 10px;
     background-image:linear-gradient(to top, rgb(251, 247, 247), rgb(226, 226, 234));
     box-shadow: 5px 5px 5px grey;
-    padding: 10px;
     min-height: 250px;
+    padding: 50px;
 }
 
 .esittely-kuva{
@@ -25,4 +87,5 @@ p{
     height: 200px;
     border: 1px solid grey;
     float: left;
+    margin: 10px;
 }
