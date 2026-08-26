@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    font-family:'Segoe UI';
+}
+
+:root {
+  --main-border-radius: 20px;
+  --bratgreen: #7cb518;
+  --darkgreen: #527201;
+  --flameorange: #fb6107;
+  --orange: #fbb02d;
+  --brightyellow: #f3de2c;
+}
+
+body{
+    background-image: linear-gradient(
+		to bottom, 
+        beige,
+        white,
+		);
+}
+
+h1{
+    margin: 10px;
+    color: var(--darkgreen);
+}
+
+p{
+    margin: 10px;
+    color: var(--darkgreen);
+}
+
+header{
+    background-color: var(--darkgreen);
+    padding: 20px;
+    border-bottom-left-radius: var(--main-border-radius);
+    border-bottom-right-radius: var(--main-border-radius);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+nav{
+    float: right;
+}
+
+nav li{
+    float: left;
+    list-style-type: none;
+    margin-right: 15px;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--brightyellow);
+}
+
+nav a:hover{
+    color:white;
+}
+
+nav a:active{
+    color: var(--orange);
+}
+
+nav li:last-child{
+    margin-right: 0;
+}
+
+button{
+	border: none;
+	border-radius: 3px;
+	padding: 5px;
+}
+
+section{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+dialog{
+    position: fixed;
+	left: 50%;
+	top: 50%;
+	border: none;
+	border-radius: var(--main-border-radius);
+	background-image: linear-gradient(
+		to bottom, 
+		var(--bratgreen), 
+		var(--brightyellow)
+		);
+	box-shadow: 0px 0px 10px black;
+}
+
+dialog::backdrop{
+	backdrop-filter: blur(2.5px) brightness(50%);
+}
+
+#close-dialog{
+	float: right;
+}
+
+footer{
+    background-color: var(--darkgreen);
+    margin-top: 10px;
+    padding: 10px;
+}
+
+footer p{
+    text-align: center;
+}
+
+.centered{
+    width: 1000px;
+    margin: auto;
+}
+
+.page-name{
+    color: var(--orange);
+}
+
+.absolute-img{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 310px;
+    right: 180px;
+}
+
+.esittely{
+    border-radius: var(--main-border-radius);
+    background-image: url("../images/tausta-wide.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(60, 57, 245);
+    box-shadow: 5px 5px 5px grey;
+    min-height: 250px;
+    padding: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+@media screen and (max-width: 780px){
+    .esittely{
+        background-image: url("../images/tausta1.png")
+    }
+}
+
+.esittely-kuva{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    float: left;
+    margin: 10px;
+}
+
+.esittely-teksti{
+    color: black !important;
+}
+
+.footer-text{
+    color: var(--brightyellow);
+}

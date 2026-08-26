@@ -3,42 +3,85 @@
 <head>
 	<title>Hyvät Nettisivut</title>
 	<meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+	<dialog id="login-dialog">
 
-    <header class="centered">
-        <span class="page-name">Hyvät Nettisivut</span>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Etusivu</a></li>
-                <li><a href="index.html">Tietoja meistä</a></li>
-                <li><a href="index.html">Yhteystiedot</a></li>
-            </ul>
-        </nav>
-    </header>
+		<button id="close-dialog">X</button>
 
-    <section class="centered">
-        <h1>Tervetuloa!</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quisquam temporibus sequi distinctio officiis perspiciatis accusamus debitis eligendi necessitatibus neque officia dolore repudiandae minima, mollitia a odit fuga! Totam, laboriosam?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam hic molestias soluta, eius culpa illo quam illum tempore, repudiandae vero quasi ipsam ipsa obcaecati vitae doloremque voluptatibus corrupti, a eaque.
-        </p>
-    </section>
-    <section class="esittely centered">
-        <img src="kuva.png" class="esittely-kuva" alt="Sivuston esittelykuva">
-        <div class="esittely-teksti">
-            <h1>Lisää meistä</h1>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio enim pariatur itaque, velit fugit eaque quod officia aperiam et voluptate, architecto reprehenderit illo vel earum repellendus nihil aliquid, quam tempore.
-            </p>
-        </div>
-    </section>
-    <img src="gimp-pepper.png" class="absolute-img" alt="" aria-hidden="true">
+		<h2 class="login-header">Kirjaudu sisään</h2>
 
-    <footer>
-        <p>Tehnyt JV 2026</p>
-    </footer>
+		<div>
+			<label for="username">Käyttäjänimi:</label>
+			<input type="text" name="username" id="username" required>
+		</div>
+		
+		<div>
+			<label for="password">Salasana:</label>
+			<input type="password" name="password" id="password" required>
+		</div>
+
+		<!-- <input type="submit" value="Kirjaudu"></input>-->
+	</dialog>
+
+	<header class="centered">
+		<span class="page-name">Hyvät Nettisivut</span>
+		<nav class="navbar">
+			<ul>
+				<li><a href="index.html">Etusivu</a></li>
+				<li><a href="index.html">Tietoja meistä</a></li>
+				<li><a href="index.html">Yhteystiedot</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="centered">
+
+			<button id="open-dialog">Kirjaudu</button>
+
+			<script defer>
+				dialog = document.getElementById("login-dialog");
+				btnOpen = document.getElementById("open-dialog");
+				btnClose = document.getElementById("close-dialog");
+
+				const openDialog = (e) => {
+					dialog.showModal();
+				};
+
+				const closeDialog = (e) => {
+					dialog.close();
+				};
+
+				btnOpen.addEventListener("click", openDialog);
+				btnClose.addEventListener("click", closeDialog);
+			</script>
+
+			<h1>Tervetuloa!</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quisquam temporibus sequi distinctio officiis perspiciatis accusamus debitis eligendi necessitatibus neque officia dolore repudiandae minima, mollitia a odit fuga! Totam, laboriosam?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam hic molestias soluta, eius culpa illo quam illum tempore, repudiandae vero quasi ipsam ipsa obcaecati vitae doloremque voluptatibus corrupti, a eaque.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae a animi minus laudantium totam unde iusto non error recusandae, neque, aliquid, sit quia voluptates doloribus suscipit asperiores ut? Animi, cumque!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur cupiditate odit placeat cumque molestiae sapiente? Laboriosam veritatis necessitatibus dolore quaerat ad impedit natus voluptas. Labore optio reiciendis amet distinctio?
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quo accusantium suscipit consequatur facilis sequi corrupti quam quisquam debitis, delectus tempore a, laborum unde quasi earum, nemo inventore fuga incidunt!
+			</p>
+		</section>
+		<section class="esittely centered">
+			<img src="images/kuva.png" class="esittely-kuva" alt="Sivuston esittelykuva">
+			<div>
+				<h1 class="esittely-teksti">Lisää meistä</h1>
+				<p class="esittely-teksti">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio enim pariatur itaque, velit fugit eaque quod officia aperiam et voluptate, architecto reprehenderit illo vel earum repellendus nihil aliquid, quam tempore.
+				</p>
+			</div>
+		</section>
+		<img src="images/gimp-pepper.png" class="absolute-img" alt="" aria-hidden="true">
+	</main>
+	
+	<footer>
+		<p class="footer-text">Tehnyt JV 2026</p>
+	</footer>
 </body>
 </html>
