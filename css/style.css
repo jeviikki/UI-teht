@@ -4,12 +4,12 @@
 }
 
 :root {
-  --main-border-radius: 20px;
-  --bratgreen: #7cb518;
-  --darkgreen: #527201;
-  --flameorange: #fb6107;
-  --orange: #fbb02d;
-  --brightyellow: #f3de2c;
+ 	--main-border-radius: 20px;
+  	--bratgreen: #7cb518;
+  	--darkgreen: #527201;
+  	--flameorange: #fb6107;
+  	--orange: #fbb02d;
+  	--brightyellow: #f3de2c;
 }
 
 body{
@@ -17,12 +17,17 @@ body{
 		to bottom, 
         beige,
         white,
-		);
+	);
 }
 
 h1{
     margin: 10px;
     color: var(--darkgreen);
+}
+
+h2{
+    margin: 5px;
+    color: var(--flameorange);
 }
 
 p{
@@ -68,12 +73,6 @@ nav li:last-child{
     margin-right: 0;
 }
 
-button{
-	border: none;
-	border-radius: 3px;
-	padding: 5px;
-}
-
 section{
     padding: 10px;
     margin-top: 10px;
@@ -82,15 +81,9 @@ section{
 
 dialog{
     position: fixed;
-	left: 50%;
-	top: 50%;
+	margin: auto;
 	border: none;
 	border-radius: var(--main-border-radius);
-	background-image: linear-gradient(
-		to bottom, 
-		var(--bratgreen), 
-		var(--brightyellow)
-		);
 	box-shadow: 0px 0px 10px black;
 }
 
@@ -102,10 +95,24 @@ dialog::backdrop{
 	float: right;
 }
 
+button{
+    background-color: var(--flameorange);
+    color: white;
+    border: none;
+	border-radius: 3px;
+	padding: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
 footer{
     background-color: var(--darkgreen);
     margin-top: 10px;
     padding: 10px;
+	border-top-left-radius: var(--main-border-radius);
+	border-top-right-radius: var(--main-border-radius);
 }
 
 footer p{
@@ -113,8 +120,8 @@ footer p{
 }
 
 .centered{
-    width: 1000px;
     margin: auto;
+	max-width: 1000px
 }
 
 .page-name{
@@ -125,8 +132,8 @@ footer p{
     position: absolute;
     width: 150px;
     height: 150px;
-    top: 310px;
-    right: 180px;
+    top: -70px;
+    right: -30px;
 }
 
 .esittely{
@@ -134,7 +141,7 @@ footer p{
     background-image: url("../images/tausta-wide.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    background-color: rgb(60, 57, 245);
+    background-color: var(--flameorange);
     box-shadow: 5px 5px 5px grey;
     min-height: 250px;
     padding: 50px;
@@ -145,7 +152,7 @@ footer p{
 
 @media screen and (max-width: 780px){
     .esittely{
-        background-image: url("../images/tausta1.png")
+        background-image: url("../images/tausta1.png");
     }
 }
 
