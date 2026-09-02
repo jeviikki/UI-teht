@@ -11,19 +11,44 @@
 
 		<button id="close-dialog">X</button>
 
-		<h2 class="login-header">Kirjaudu sisään</h2>
+		<h2 class="login-header">Rekisteröidy</h2>
+		<span>Voit rekisteröityä sivustolle antamalla seuraavat tiedot ohjeiden mukaisesti:</span>
+		<form>
+			<div>
+				<label for="username">Käyttäjänimi <span class="label-small">(väh. 3 merkkiä)</span></label><br>
+				<input 
+					type="text" 
+					name="username" 
+					id="username" 
+					required 
+					minlength="3">
+			</div>
 
-		<div>
-			<label for="username">Käyttäjänimi:</label>
-			<input type="text" name="username" id="username" required>
-		</div>
-		
-		<div>
-			<label for="password">Salasana:</label>
-			<input type="password" name="password" id="password" required>
-		</div>
-
-		<!-- <input type="submit" value="Kirjaudu"></input>-->
+			<div>
+				<label for="username">Sähköpostiosoite <span class="label-small">(@metropolia.fi-päätteinen)</span></label><br>
+				<input 
+					type="email" 
+					name="email" 
+					id="email" 
+					required 
+					placeholder="esimerkki@metropolia.fi"
+					minlength="15"
+					pattern="[a-z][0-9]?+@metropolia.fi$">
+			</div>
+			
+			<div>
+				<label for="password">Salasana <span class="label-small">(väh. 8 merkkiä, täytyy sisältää isoja ja pieniä kirjaimia sekä numeroita)</span></label><br>
+				<input 
+					type="password" 
+					name="password"
+					id="password" 
+					required 
+					minlength="8"
+					pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+					title="Salasanan on oltava vähintään 8 merkkiä pitkä, sisältää sekä pieniä että isoja kirjaimia ja vähintään yksi numero">
+			</div>
+			<input type="submit" value="Rekisteröidy"></input>
+		</form>
 	</dialog>
 
 	<header class="centered">
@@ -40,7 +65,7 @@
 	<main>
 		<section class="centered">
 
-			<button id="open-dialog">Kirjaudu</button>
+			<button id="open-dialog">Rekisteröidy</button>
 
 			<script defer>
 				dialog = document.getElementById("login-dialog");

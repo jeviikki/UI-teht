@@ -20,13 +20,55 @@ body{
 	);
 }
 
+@media screen and (max-width: 780px){
+    .esittely{
+        background-image: url("../images/tausta1.png");
+    }
+
+    .esittely-kuva{
+        width: 100%;
+        float: none;
+    }
+
+    .esittely-teksti{
+        float: none;
+    }
+
+    button, input[type=submit]{
+        font-size: 18px;
+    }
+
+    input[type=text], [type=password], [type=email] {
+        padding: 10px;
+    }
+}
+
+label{
+    color: var(--darkgreen);
+}
+
+.label-small{
+    font-size: 12px;
+}
+
+input[type=text], [type=password], [type=email] {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+input:valid{
+    background-color: var(--bratgreen);
+}
+
+input:invalid{
+    background-color: var(--flameorange);
+}
+
 h1{
-    margin: 10px;
     color: var(--darkgreen);
 }
 
 h2{
-    margin: 5px;
     color: var(--flameorange);
 }
 
@@ -91,11 +133,15 @@ dialog::backdrop{
 	backdrop-filter: blur(2.5px) brightness(50%);
 }
 
+#open-dialog{
+    margin: 10px;
+}
+
 #close-dialog{
 	float: right;
 }
 
-button{
+button, input[type=submit]{
     background-color: var(--flameorange);
     color: white;
     border: none;
@@ -130,10 +176,10 @@ footer p{
 
 .absolute-img{
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     top: -70px;
-    right: -30px;
+    right: 0px;
 }
 
 .esittely{
@@ -148,12 +194,6 @@ footer p{
     margin-top: 30px;
     margin-bottom: 30px;
     position: relative;
-}
-
-@media screen and (max-width: 780px){
-    .esittely{
-        background-image: url("../images/tausta1.png");
-    }
 }
 
 .esittely-kuva{
