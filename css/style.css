@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    font-family:'Segoe UI';
+    font-family: "Roboto", sans-serif;
 }
 
 :root {
@@ -20,26 +20,43 @@ body{
 	);
 }
 
-@media screen and (max-width: 780px){
+@media screen and (max-width: 600px){
+    p, span, input, label, button, li a, h3{
+        font-size: 32px !important;
+    }
+    h1{
+        font-size: 48px;
+    }
+    h2{
+        font-size: 44px;
+    }
+    .label-small{
+        font-size: 24px !important;
+    }
+    header, nav ul{
+        display: grid;
+        grid-auto-columns: auto;
+    }
+    li{
+        padding-top: 15px;
+    }
+    .centered{
+        width: 600px !important;
+    }
     .esittely{
         background-image: url("../images/tausta1.png");
     }
-
     .esittely-kuva{
-        width: 100%;
-        float: none;
+        float: none !important;
+        width: 100% !important;
+        object-fit: cover;
     }
-
-    .esittely-teksti{
-        float: none;
-    }
-
-    button, input[type=submit]{
-        font-size: 18px;
-    }
-
     input[type=text], [type=password], [type=email] {
         padding: 10px;
+    }
+    button, input[type="submit"]{
+        padding: 15px !important;
+        border-radius: 15px !important;
     }
 }
 
@@ -61,7 +78,7 @@ input:valid{
 }
 
 input:invalid{
-    background-color: var(--flameorange);
+    background-color: var(--orange);
 }
 
 h1{
@@ -86,6 +103,7 @@ header{
     top: 0;
     left: 0;
     z-index: 5;
+    height: 100%;
 }
 
 nav{
@@ -145,12 +163,38 @@ button, input[type=submit]{
     background-color: var(--flameorange);
     color: white;
     border: none;
-	border-radius: 3px;
-	padding: 5px;
+	border-radius: 5px;
+	padding: 10px;
+    font-size: 18px;
 }
 
-button:hover{
+button:hover, input[type="submit"]:hover{
     cursor: pointer;
+}
+
+.button{
+    background-image: linear-gradient(to bottom, var(--flameorange) 50%, var(--orange) 100%, var(--brightyellow) 5%);
+}
+
+.hero-img{
+    background-image: url("../images/hero.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    min-height: 200px;
+    padding: 15px;
+    object-fit: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.hero-text{
+    color: white;
+    text-align: center;
 }
 
 footer{
@@ -167,7 +211,8 @@ footer p{
 
 .centered{
     margin: auto;
-	max-width: 1000px
+	max-width: 1000px;
+    box-sizing: border-box;
 }
 
 .page-name{
@@ -189,8 +234,8 @@ footer p{
     background-size: 100%;
     background-color: var(--flameorange);
     box-shadow: 5px 5px 5px grey;
-    min-height: 250px;
     padding: 50px;
+    min-height: 300px;
     margin-top: 30px;
     margin-bottom: 30px;
     position: relative;

@@ -3,7 +3,11 @@
 <head>
 	<title>Hyvät Nettisivut</title>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,7 +37,7 @@
 					required 
 					placeholder="esimerkki@metropolia.fi"
 					minlength="15"
-					pattern="[a-z][0-9]?+@metropolia.fi$">
+					pattern=".+@metropolia\.fi$">
 			</div>
 			
 			<div>
@@ -47,7 +51,7 @@
 					pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
 					title="Salasanan on oltava vähintään 8 merkkiä pitkä, sisältää sekä pieniä että isoja kirjaimia ja vähintään yksi numero">
 			</div>
-			<input type="submit" value="Rekisteröidy"></input>
+			<input type="submit" value="Rekisteröidy" class="button"></input>
 		</form>
 	</dialog>
 
@@ -63,10 +67,10 @@
 	</header>
 
 	<main>
-		<section class="centered">
-
-			<button id="open-dialog">Rekisteröidy</button>
-
+		<div class="hero-img centered">
+			<h1 class="hero-text">Liity käyttäjäksi!</h1>
+			<p class="hero-text">Liity jo tänään käyttäjäksi Hyville Nettisivuille painamalla "Rekisteröidy".</p>
+			<button id="open-dialog" class="button">Rekisteröidy</button>
 			<script defer>
 				dialog = document.getElementById("login-dialog");
 				btnOpen = document.getElementById("open-dialog");
@@ -83,14 +87,12 @@
 				btnOpen.addEventListener("click", openDialog);
 				btnClose.addEventListener("click", closeDialog);
 			</script>
-
-			<h1>Tervetuloa!</h1>
+		</div>
+		<section class="centered">
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quisquam temporibus sequi distinctio officiis perspiciatis accusamus debitis eligendi necessitatibus neque officia dolore repudiandae minima, mollitia a odit fuga! Totam, laboriosam?
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam hic molestias soluta, eius culpa illo quam illum tempore, repudiandae vero quasi ipsam ipsa obcaecati vitae doloremque voluptatibus corrupti, a eaque.
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae a animi minus laudantium totam unde iusto non error recusandae, neque, aliquid, sit quia voluptates doloribus suscipit asperiores ut? Animi, cumque!
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur cupiditate odit placeat cumque molestiae sapiente? Laboriosam veritatis necessitatibus dolore quaerat ad impedit natus voluptas. Labore optio reiciendis amet distinctio?
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quo accusantium suscipit consequatur facilis sequi corrupti quam quisquam debitis, delectus tempore a, laborum unde quasi earum, nemo inventore fuga incidunt!
 			</p>
 		</section>
 		<section class="esittely centered">
