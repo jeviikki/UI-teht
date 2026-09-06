@@ -179,7 +179,7 @@ button:hover, input[type="submit"]:hover{
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
-    min-height: 200px;
+    min-height: 250px;
     padding: 15px;
     object-fit: cover;
     position: relative;
