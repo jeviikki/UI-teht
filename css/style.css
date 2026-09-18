@@ -256,7 +256,7 @@ input[type="submit"]:hover {
   width: 125px;
   height: 125px;
   top: -70px;
-  right: 0px;
+  right: 25px;
   transition: 1s;
 }
 
