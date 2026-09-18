@@ -14,34 +14,46 @@
 </head>
 
 <body>
+
 	<dialog id="login-dialog">
 
-		<button id="close-dialog">X</button>
+		<div class="login-dialog-container">
 
-		<h2 class="login-header">Rekisteröidy</h2>
-		<span>Voit rekisteröityä sivustolle antamalla seuraavat tiedot ohjeiden mukaisesti:</span>
-		<form>
-			<div>
-				<label for="username">Käyttäjänimi <span class="label-small">(väh. 3 merkkiä)</span></label><br>
-				<input type="text" name="username" id="username" required minlength="3">
-			</div>
+			<button id="close-dialog">X</button>
 
 			<div>
-				<label for="username">Sähköpostiosoite <span
-						class="label-small">(@metropolia.fi-päätteinen)</span></label><br>
-				<input type="email" name="email" id="email" required placeholder="esimerkki@metropolia.fi"
-					minlength="15" pattern=".+@metropolia\.fi$">
+
+				<h2 class="login-header">Rekisteröidy</h2>
+
+				<span>Voit rekisteröityä sivustolle antamalla seuraavat tiedot ohjeiden mukaisesti:</span>
+
+				<form>
+					<div>
+						<label for="username"><i class="fa-solid fa-user"></i>Käyttäjänimi <span class="label-small">(väh. 3 merkkiä)</span></label><br>
+						<input type="text" name="username" id="username" required minlength="3">
+					</div>
+
+					<div>
+						<label for="email"><i class="fa-solid fa-at"></i>Sähköpostiosoite <span
+								class="label-small">(@metropolia.fi-päätteinen)</span></label><br>
+						<input type="email" name="email" id="email" required placeholder="esimerkki@metropolia.fi"
+							minlength="15" pattern=".+@metropolia\.fi$">
+					</div>
+
+					<div>
+						<label for="password"><i class="fa-solid fa-key"></i>Salasana <span class="label-small">(väh. 8 merkkiä, täytyy sisältää isoja ja
+								pieniä kirjaimia sekä numeroita)</span></label><br>
+						<input type="password" name="password" id="password" required minlength="8"
+							pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+							title="Salasanan on oltava vähintään 8 merkkiä pitkä, sisältää sekä pieniä että isoja kirjaimia ja vähintään yksi numero">
+					</div>
+					<input type="submit" value="Rekisteröidy" class="button"></input>
+				</form>
+
 			</div>
 
-			<div>
-				<label for="password">Salasana <span class="label-small">(väh. 8 merkkiä, täytyy sisältää isoja ja
-						pieniä kirjaimia sekä numeroita)</span></label><br>
-				<input type="password" name="password" id="password" required minlength="8"
-					pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-					title="Salasanan on oltava vähintään 8 merkkiä pitkä, sisältää sekä pieniä että isoja kirjaimia ja vähintään yksi numero">
-			</div>
-			<input type="submit" value="Rekisteröidy" class="button"></input>
-		</form>
+		</div>
+
 	</dialog>
 
 	<main>
@@ -58,7 +70,7 @@
 			<div class="hero-img centered">
 				<h1 class="hero-text">Liity käyttäjäksi!</h1>
 				<p class="hero-text">Liity jo tänään käyttäjäksi Hyville Nettisivuille painamalla "Rekisteröidy".</p>
-				<button id="open-dialog" class="button"><i class="fa-solid fa-user"></i>Rekisteröidy</button>
+				<button id="open-dialog" class="button"><i class="fa-solid fa-id-card"></i>Rekisteröidy</button>
 				<script defer>
 					dialog = document.getElementById("login-dialog");
 					btnOpen = document.getElementById("open-dialog");

@@ -39,6 +39,11 @@ body {
     display: flex;
     flex-flow: column;
   }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   nav ul {
     display: flex;
     flex-direction: column;
@@ -57,8 +62,9 @@ body {
     flex-direction: column;
     align-items: center !important;
   }
-  .esittely-kuva img {
-    width: 100% !important;
+  .esittely-frame {
+    width: auto !important;
+    height: 100% !important;
     object-fit: cover;
   }
   input[type="text"],
@@ -106,6 +112,7 @@ h2 {
 
 p {
   color: var(--darkgreen);
+  margin: 0;
 }
 
 main {
@@ -180,6 +187,12 @@ dialog {
   box-shadow: 0px 0px 10px black;
 }
 
+.login-dialog-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+
 dialog::backdrop {
   backdrop-filter: blur(2.5px) brightness(50%);
 }
@@ -189,7 +202,7 @@ dialog::backdrop {
 }
 
 #close-dialog {
-  float: right;
+  object-fit: contain;
 }
 
 button,
@@ -231,6 +244,7 @@ input[type="submit"]:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .hero-text {
