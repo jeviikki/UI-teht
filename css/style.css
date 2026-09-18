@@ -257,6 +257,11 @@ input[type="submit"]:hover {
   height: 125px;
   top: -70px;
   right: 0px;
+  transition: 1s;
+}
+
+.absolute-img:hover {
+  transform: rotate(1turn);
 }
 
 .esittely {
