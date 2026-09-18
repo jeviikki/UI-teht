@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fi">
+
 <head>
 	<title>Hyvät Nettisivut</title>
 	<meta charset="UTF-8">
@@ -7,7 +8,9 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<script src="https://kit.fontawesome.com/fd678757a1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,34 +23,20 @@
 		<form>
 			<div>
 				<label for="username">Käyttäjänimi <span class="label-small">(väh. 3 merkkiä)</span></label><br>
-				<input 
-					type="text" 
-					name="username" 
-					id="username" 
-					required 
-					minlength="3">
+				<input type="text" name="username" id="username" required minlength="3">
 			</div>
 
 			<div>
-				<label for="username">Sähköpostiosoite <span class="label-small">(@metropolia.fi-päätteinen)</span></label><br>
-				<input 
-					type="email" 
-					name="email" 
-					id="email" 
-					required 
-					placeholder="esimerkki@metropolia.fi"
-					minlength="15"
-					pattern=".+@metropolia\.fi$">
+				<label for="username">Sähköpostiosoite <span
+						class="label-small">(@metropolia.fi-päätteinen)</span></label><br>
+				<input type="email" name="email" id="email" required placeholder="esimerkki@metropolia.fi"
+					minlength="15" pattern=".+@metropolia\.fi$">
 			</div>
-			
+
 			<div>
-				<label for="password">Salasana <span class="label-small">(väh. 8 merkkiä, täytyy sisältää isoja ja pieniä kirjaimia sekä numeroita)</span></label><br>
-				<input 
-					type="password" 
-					name="password"
-					id="password" 
-					required 
-					minlength="8"
+				<label for="password">Salasana <span class="label-small">(väh. 8 merkkiä, täytyy sisältää isoja ja
+						pieniä kirjaimia sekä numeroita)</span></label><br>
+				<input type="password" name="password" id="password" required minlength="8"
 					pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
 					title="Salasanan on oltava vähintään 8 merkkiä pitkä, sisältää sekä pieniä että isoja kirjaimia ja vähintään yksi numero">
 			</div>
@@ -55,62 +44,88 @@
 		</form>
 	</dialog>
 
-	<header class="centered">
-		<span class="page-name">Hyvät Nettisivut</span>
-		<nav class="navbar">
-			<ul>
-				<li><a href="index.html">Etusivu</a></li>
-				<li><a href="index.html">Tietoja meistä</a></li>
-				<li><a href="index.html">Yhteystiedot</a></li>
-			</ul>
-		</nav>
-	</header>
-
 	<main>
-		<div class="hero-img centered">
-			<h1 class="hero-text">Liity käyttäjäksi!</h1>
-			<p class="hero-text">Liity jo tänään käyttäjäksi Hyville Nettisivuille painamalla "Rekisteröidy".</p>
-			<button id="open-dialog" class="button">Rekisteröidy</button>
-			<script defer>
-				dialog = document.getElementById("login-dialog");
-				btnOpen = document.getElementById("open-dialog");
-				btnClose = document.getElementById("close-dialog");
 
-				const openDialog = (e) => {
-					dialog.showModal();
-				};
+		<header class="centered">
+			<nav class="navbar">
+				<p class="page-name">Hyvät Nettisivut</p>
+				<ul>
+					<li><a href="index.html"><i class="fa-solid fa-house"></i>Etusivu</a></li>
+					<li><a href="index.html"><i class="fa-solid fa-info"></i>Tietoja meistä</a></li>
+					<li><a href="index.html"><i class="fa-solid fa-address-book"></i>Yhteystiedot</a></li>
+				</ul>
+			</nav>
+			<div class="hero-img centered">
+				<h1 class="hero-text">Liity käyttäjäksi!</h1>
+				<p class="hero-text">Liity jo tänään käyttäjäksi Hyville Nettisivuille painamalla "Rekisteröidy".</p>
+				<button id="open-dialog" class="button"><i class="fa-solid fa-user"></i>Rekisteröidy</button>
+				<script defer>
+					dialog = document.getElementById("login-dialog");
+					btnOpen = document.getElementById("open-dialog");
+					btnClose = document.getElementById("close-dialog");
 
-				const closeDialog = (e) => {
-					dialog.close();
-				};
+					const openDialog = (e) => {
+						dialog.showModal();
+					};
 
-				btnOpen.addEventListener("click", openDialog);
-				btnClose.addEventListener("click", closeDialog);
-			</script>
-		</div>
-		<section class="centered">
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quisquam temporibus sequi distinctio officiis perspiciatis accusamus debitis eligendi necessitatibus neque officia dolore repudiandae minima, mollitia a odit fuga! Totam, laboriosam?
-				<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam hic molestias soluta, eius culpa illo quam illum tempore, repudiandae vero quasi ipsam ipsa obcaecati vitae doloremque voluptatibus corrupti, a eaque.
-				<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae a animi minus laudantium totam unde iusto non error recusandae, neque, aliquid, sit quia voluptates doloribus suscipit asperiores ut? Animi, cumque!
-				<br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae exercitationem animi, eum tempora ipsa omnis numquam, ipsam dignissimos nemo id laudantium facilis architecto, distinctio eius? Totam distinctio temporibus in laborum.
-				<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quas beatae assumenda iste dolorem culpa. Amet fuga quo libero, praesentium adipisci similique quisquam ab itaque et eos unde ipsum placeat?
-			</p>
-		</section>
-		<section class="esittely centered">
-		    <img src="images/gimp-pepper.png" class="absolute-img" alt="" aria-hidden="true">
-			<img src="images/kuva.png" class="esittely-kuva" alt="Sivuston esittelykuva">
-			<div>
-				<h1 class="esittely-teksti">Lisää meistä</h1>
-				<p class="esittely-teksti">
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio enim pariatur itaque, velit fugit eaque quod officia aperiam et voluptate, architecto reprehenderit illo vel earum repellendus nihil aliquid, quam tempore.
-				</p>
+					const closeDialog = (e) => {
+						dialog.close();
+					};
+
+					btnOpen.addEventListener("click", openDialog);
+					btnClose.addEventListener("click", closeDialog);
+				</script>
 			</div>
-		</section>
+		</header>
+
+		<section class="centered">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quisquam temporibus sequi distinctio
+					officiis perspiciatis accusamus debitis eligendi necessitatibus neque officia dolore repudiandae
+					minima, mollitia a odit fuga! Totam, laboriosam?
+					<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam hic molestias soluta, eius
+					culpa illo quam illum tempore, repudiandae vero quasi ipsam ipsa obcaecati vitae doloremque
+					voluptatibus corrupti, a eaque.
+					<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae a animi minus laudantium totam
+					unde iusto non error recusandae, neque, aliquid, sit quia voluptates doloribus suscipit asperiores
+					ut? Animi, cumque!
+					<br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae exercitationem animi, eum
+					tempora ipsa omnis numquam, ipsam dignissimos nemo id laudantium facilis architecto, distinctio
+					eius? Totam distinctio temporibus in laborum.
+					<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quas beatae assumenda iste dolorem
+					culpa. Amet fuga quo libero, praesentium adipisci similique quisquam ab itaque et eos unde ipsum
+					placeat?
+				</p>
+			</section>
+
+			<section class="esittely centered">
+
+				<img src="images/gimp-pepper.png" class="absolute-img" alt="" aria-hidden="true">
+
+				<div class="esittely-flex">
+
+					<div class="esittely-frame">
+						<img src="images/kuva.png" class="esittely-kuva zoomable-img" alt="Sivuston esittelykuva">
+					</div>
+
+					<div class="esittely-segment">
+						<h1 class="esittely-teksti">Lisää meistä</h1>
+						<p class="esittely-teksti">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio enim pariatur itaque, velit
+							fugit eaque quod officia aperiam et voluptate, architecto reprehenderit illo vel earum
+							repellendus nihil aliquid, quam tempore.
+						</p>
+					</div>
+
+				</div>
+
+			</section>
+
+		<footer class="centered">
+			<p class="footer-text"><i class="fa-solid fa-copyright"></i>Tehnyt JV 2026</p>
+		</footer>
 	</main>
-	
-	<footer class="centered">
-		<p class="footer-text">Tehnyt JV 2026</p>
-	</footer>
+
 </body>
+
 </html>

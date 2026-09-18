@@ -1,255 +1,297 @@
 * {
-    margin: 0;
-    font-family: "Roboto", sans-serif;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 :root {
- 	--main-border-radius: 20px;
-  	--bratgreen: #7cb518;
-  	--darkgreen: #527201;
-  	--flameorange: #fb6107;
-  	--orange: #fbb02d;
-  	--brightyellow: #f3de2c;
+  --main-border-radius: 20px;
+  --bratgreen: #7cb518;
+  --darkgreen: #527201;
+  --flameorange: #fb6107;
+  --amberorange: #fbb02d;
+  --brightyellow: #f3de2c;
 }
 
-body{
-    background-image: linear-gradient(
-		to bottom, 
-        beige,
-        white,
-	);
+body {
+  background-image: linear-gradient(to bottom, beige, white);
 }
 
-@media screen and (max-width: 600px){
-    p, span, input, label, button, li a, h3{
-        font-size: 32px !important;
-    }
-    h1{
-        font-size: 48px;
-    }
-    h2{
-        font-size: 44px;
-    }
-    .label-small{
-        font-size: 24px !important;
-    }
-    header, nav ul{
-        display: grid;
-        grid-auto-columns: auto;
-    }
-    li{
-        padding-top: 15px;
-    }
-    .centered{
-        width: 600px !important;
-    }
-    .esittely{
-        background-image: url("../images/tausta1.png");
-    }
-    .esittely-kuva{
-        float: none !important;
-        width: 100% !important;
-        object-fit: cover;
-    }
-    input[type=text], [type=password], [type=email] {
-        padding: 10px;
-    }
-    button, input[type="submit"]{
-        padding: 15px !important;
-        border-radius: 15px !important;
-    }
-}
-
-label{
-    color: var(--darkgreen);
-}
-
-.label-small{
-    font-size: 12px;
-}
-
-input[type=text], [type=password], [type=email] {
-    padding: 5px;
-    margin-bottom: 5px;
-}
-
-input:valid{
-    border-left: 5px solid var(--bratgreen);
-}
-
-input:invalid{
-    border-left: 5px solid var(--flameorange);
-}
-
-h1{
-    color: var(--darkgreen);
-}
-
-h2{
-    color: var(--flameorange);
-}
-
-p{
-    margin: 10px;
-    color: var(--darkgreen);
-}
-
-header{
-    background-color: var(--darkgreen);
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    height: 100%;
-}
-
-nav{
-    float: right;
-}
-
-nav li{
-    float: left;
-    list-style-type: none;
-    margin-right: 15px;
-}
-
-nav a{
-    text-decoration: none;
-    color: var(--brightyellow);
-}
-
-nav a:hover{
-    color:white;
-}
-
-nav a:active{
-    color: var(--orange);
-}
-
-nav li:last-child{
-    margin-right: 0;
-}
-
-section{
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-dialog{
-    position: fixed;
-	margin: auto;
-	border: none;
-	border-radius: var(--main-border-radius);
-	box-shadow: 0px 0px 10px black;
-}
-
-dialog::backdrop{
-	backdrop-filter: blur(2.5px) brightness(50%);
-}
-
-#open-dialog{
-    margin: 10px;
-}
-
-#close-dialog{
-	float: right;
-}
-
-button, input[type=submit]{
-    background-color: var(--flameorange);
-    color: white;
-    border: none;
-	border-radius: 5px;
-	padding: 10px;
-    font-size: 18px;
-}
-
-button:hover, input[type="submit"]:hover{
-    cursor: pointer;
-}
-
-.button{
-    background-image: linear-gradient(to bottom, var(--flameorange) 50%, var(--orange) 100%, var(--brightyellow) 5%);
-}
-
-.hero-img{
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/hero.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    min-height: 250px;
-    padding: 15px;
-    object-fit: cover;
-    position: relative;
+@media screen and (max-width: 600px) {
+  p,
+  span,
+  input,
+  label,
+  button,
+  li a,
+  h3 {
+    font-size: 32px !important;
+  }
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 44px;
+  }
+  .label-small {
+    font-size: 24px !important;
+  }
+  header {
+    display: flex;
+    flex-flow: column;
+  }
+  nav ul {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin-top: 5px;
-    border-bottom-left-radius: var(--main-border-radius);
-    border-bottom-right-radius: var(--main-border-radius);
-}
-
-.hero-text{
-    color: white;
-    text-align: center;
-}
-
-footer{
-    background-color: var(--darkgreen);
-    margin-top: 10px;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .centered {
+    width: 600px !important;
+  }
+  .esittely {
+    background-image: url("../images/tausta1.png");
+  }
+  .esittely-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+  }
+  .esittely-kuva img {
+    width: 100% !important;
+    object-fit: cover;
+  }
+  input[type="text"],
+  [type="password"],
+  [type="email"] {
     padding: 10px;
+  }
+  button,
+  input[type="submit"] {
+    padding: 15px !important;
+    border-radius: 15px !important;
+  }
 }
 
-footer p{
-    text-align: center;
+label {
+  color: var(--darkgreen);
 }
 
-.centered{
-    margin: auto;
-	max-width: 1300px;
-    box-sizing: border-box;
+.label-small {
+  font-size: 12px;
 }
 
-.page-name{
-    color: var(--orange);
+input[type="text"],
+[type="password"],
+[type="email"] {
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
-.absolute-img{
-    position: absolute;
-    width: 125px;
-    height: 125px;
-    top: -70px;
-    right: 0px;
+input:valid {
+  border-left: 5px solid var(--bratgreen);
 }
 
-.esittely{
-    border-radius: var(--main-border-radius);
-    background-image: url("../images/tausta-wide.png");
-    background-repeat: no-repeat;
-    background-color: var(--flameorange);
-    box-shadow: 5px 5px 5px grey;
-    padding: 50px;
-    min-height: 300px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    position: relative;
+input:invalid {
+  border-left: 5px solid var(--flameorange);
 }
 
-.esittely-kuva{
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    float: left;
-    margin: 10px;
+h1 {
+  color: var(--darkgreen);
 }
 
-.esittely-teksti{
-    color: black !important;
+h2 {
+  color: var(--flameorange);
 }
 
-.footer-text{
-    color: var(--brightyellow);
+p {
+  color: var(--darkgreen);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+header {
+  border-bottom-left-radius: var(--main-border-radius);
+  border-bottom-right-radius: var(--main-border-radius);
+  overflow: hidden;
+  width: 100%;
+}
+
+nav {
+  background-color: var(--darkgreen);
+  padding: 20px;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  list-style-type: none;
+  margin-right: 15px;
+  display: block;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--brightyellow);
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a:active {
+  color: var(--amberorange);
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+.centered {
+  margin: auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+.page-name {
+  color: var(--amberorange);
+}
+
+section {
+  padding: 10px;
+}
+
+dialog {
+  position: fixed;
+  margin: auto;
+  border: none;
+  border-radius: var(--main-border-radius);
+  box-shadow: 0px 0px 10px black;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(2.5px) brightness(50%);
+}
+
+#open-dialog {
+  margin: 10px;
+}
+
+#close-dialog {
+  float: right;
+}
+
+button,
+input[type="submit"] {
+  background-color: var(--flameorange);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.button {
+  background-image: linear-gradient(
+    to bottom,
+    var(--flameorange) 50%,
+    var(--amberorange) 100%,
+    var(--brightyellow) 5%
+  );
+}
+
+.hero-img {
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/hero.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  min-height: 250px;
+  padding: 15px;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  color: white;
+}
+
+.absolute-img {
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  top: -70px;
+  right: 0px;
+}
+
+.esittely {
+  border-radius: var(--main-border-radius);
+  background-image: url("../images/tausta-wide.png");
+  background-repeat: no-repeat;
+  background-color: var(--flameorange);
+  box-shadow: 5px 5px 5px grey;
+  padding: 50px;
+  min-height: 300px;
+  position: relative;
+}
+
+.esittely-flex {
+  display: flex;
+}
+
+.esittely-kuva {
+  transition: transform 0.5s;
+}
+
+.esittely-frame {
+  object-fit: contain;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  flex-grow: 5;
+  display: flex;
+  min-width: 200px;
+  height: 200px;
+}
+
+.esittely-teksti {
+  color: black !important;
+}
+
+.zoomable-img:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: var(--darkgreen);
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-text {
+  color: var(--brightyellow);
 }
