@@ -220,6 +220,7 @@ nav li:last-child {
 .pillerimenu li:hover {
   background-color: lightgoldenrodyellow;
   border-color: var(--darkgreen);
+  cursor: pointer;
 }
 
 /* elementit */
