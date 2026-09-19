@@ -16,6 +16,8 @@ body {
   background-image: linear-gradient(to bottom, beige, white);
 }
 
+/* kapeammille näytöille */
+
 @media screen and (max-width: 600px) {
   p,
   span,
@@ -54,6 +56,9 @@ body {
   .centered {
     width: 600px !important;
   }
+  .pillerimenu li {
+    font-size: 26px;
+  }
   .esittely {
     background-image: url("../images/tausta1.png");
   }
@@ -87,19 +92,8 @@ label {
   font-size: 12px;
 }
 
-input[type="text"],
-[type="password"],
-[type="email"] {
-  padding: 5px;
-  margin-bottom: 5px;
-}
-
-input:valid {
-  border-left: 5px solid var(--bratgreen);
-}
-
-input:invalid {
-  border-left: 5px solid var(--flameorange);
+.fa-solid {
+  display: none;
 }
 
 h1 {
@@ -115,17 +109,27 @@ p {
   margin: 0;
 }
 
+i {
+  display: inline;
+}
+
 main {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 40px;
 }
+
+/* navbar ja header */
 
 header {
   border-bottom-left-radius: var(--main-border-radius);
   border-bottom-right-radius: var(--main-border-radius);
   overflow: hidden;
   width: 100%;
+}
+
+.page-name {
+  color: var(--amberorange);
 }
 
 nav {
@@ -135,16 +139,17 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 10px;
 }
 
 nav ul {
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 
 nav li {
   list-style-type: none;
-  margin-right: 15px;
   display: block;
 }
 
@@ -165,19 +170,71 @@ nav li:last-child {
   margin-right: 0;
 }
 
+.hero-img {
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/hero.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  min-height: 250px;
+  padding: 15px;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-text {
+  color: white;
+}
+
+/* pillerimenu ja yms */
+
+.preferences {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.pillerimenu {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.pillerimenu li {
+  list-style-type: none;
+  display: block;
+  border: var(--bratgreen) solid 2px;
+  color: var(--flameorange);
+  padding: 10px;
+  border-radius: var(--main-border-radius);
+}
+
+.pillerimenu li:hover {
+  background-color: lightgoldenrodyellow;
+  border-color: var(--darkgreen);
+}
+
+/* elementit */
+
 .centered {
   margin: auto;
   max-width: 1200px;
   box-sizing: border-box;
 }
 
-.page-name {
-  color: var(--amberorange);
-}
-
 section {
   padding: 10px;
 }
+
+/* dialog */
 
 dialog {
   position: fixed;
@@ -191,6 +248,7 @@ dialog {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-start;
+  gap: 10px;
 }
 
 dialog::backdrop {
@@ -201,8 +259,10 @@ dialog::backdrop {
   margin: 10px;
 }
 
-#close-dialog {
-  object-fit: contain;
+button:hover,
+input[type="submit"]:hover {
+  background-image: none;
+  background-color: orange;
 }
 
 button,
@@ -229,27 +289,22 @@ input[type="submit"]:hover {
   );
 }
 
-.hero-img {
-  background-image:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/hero.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 100%;
-  min-height: 250px;
-  padding: 15px;
-  object-fit: cover;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+input[type="text"],
+[type="password"],
+[type="email"] {
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
-.hero-text {
-  color: white;
+input:valid:not(input[type="submit"]) {
+  border-left: 5px solid var(--bratgreen);
 }
+
+input:invalid {
+  border-left: 5px solid var(--flameorange);
+}
+
+/* esittely ja absolute img */
 
 .absolute-img {
   position: absolute;
@@ -301,6 +356,8 @@ input[type="submit"]:hover {
 .zoomable-img:hover {
   transform: scale(1.1);
 }
+
+/*footer*/
 
 footer {
   background-color: var(--darkgreen);
