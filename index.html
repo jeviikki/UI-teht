@@ -4,7 +4,8 @@
 <head>
 	<title>Hyvät Nettisivut</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" type="image/x-icon" href="images/paprika-svgrepo-com.svg">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,10 +68,22 @@
 					<li><a href="index.html"><i class="fa-solid fa-address-book"></i>Yhteystiedot</a></li>
 				</ul>
 			</nav>
-			<div class="hero-img centered">
-				<h1 class="hero-text">Liity käyttäjäksi!</h1>
-				<p class="hero-text">Rekisteröityneet käyttäjät voivat tallentaa tietonsa palvelimelle, ettei niitä tarvitse täyttää joka kerta uudestaan.</p>
-				<button id="open-dialog" class="button"><i class="fa-solid fa-id-card"></i>Rekisteröidy</button>
+			<div class="hero-img">
+
+				<div class="hero-left">
+					<h1 class="hero-text">Liity käyttäjäksi!</h1>
+					<p class="hero-text">Rekisteröityneet käyttäjät voivat...</p>
+					<ul>
+						<li>Tallentaa tietonsa nopeuttaakseen asiointia</li>
+						<li>Saada alennuksia</li>
+						<li>Asettaa itselleen profiilikuvan</li>
+					</ul>
+				</div>
+				
+				<div class="hero-right">
+					<button id="open-dialog" class="button"><i class="fa-solid fa-id-card"></i>Rekisteröidy</button>
+				</div>
+				
 				<script defer>
 					dialog = document.getElementById("login-dialog");
 					btnOpen = document.getElementById("open-dialog");
@@ -91,7 +104,7 @@
 		</header>
 
 		<section class="centered preferences">
-			<p>Ruokalista</p>
+			<p class="green-text">Ruokalista</p>
 			<h2>Mitä tekisi mieli syödä?</h2>
 
 			<!-- toistaiseksi eivät tee mitään -->
@@ -103,7 +116,7 @@
 		</section>
 
 		<section class="centered">
-				<p>
+				<p class="green-text">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quisquam temporibus sequi distinctio
 					officiis perspiciatis accusamus debitis eligendi necessitatibus neque officia dolore repudiandae
 					minima, mollitia a odit fuga! Totam, laboriosam?
@@ -147,6 +160,16 @@
 
 		<footer class="centered">
 			<p class="footer-text"><i class="fa-solid fa-copyright"></i>Tehnyt JV 2026</p>
+
+			<div class="footer-link">
+
+				<a href="https://github.com/jeviikki/UI-teht/tree/viikko-4">
+					<img src="images/github-color-svgrepo-com.svg" class="footer-img">
+					<p>Lähdekoodi GitHubissa</p>
+				</a>
+
+			</div>
+
 		</footer>
 	</main>
 

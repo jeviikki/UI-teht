@@ -53,8 +53,14 @@ body {
     justify-content: flex-start;
     padding: 0;
   }
+  .hero-img {
+    flex-direction: column !important;
+  }
+  .hero-left {
+    width: 100% !important;
+  }
   .centered {
-    width: 600px !important;
+    max-width: 600px !important;
   }
   .pillerimenu li {
     font-size: 26px;
@@ -105,7 +111,6 @@ h2 {
 }
 
 p {
-  color: var(--darkgreen);
   margin: 0;
 }
 
@@ -176,16 +181,23 @@ nav li:last-child {
     url("../images/hero.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 100%;
   min-height: 250px;
-  padding: 15px;
+  padding: 10px 50px;
+  color: white;
   object-fit: cover;
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
   gap: 10px;
+}
+
+.hero-left {
+  flex-grow: 1;
+}
+
+.hero-right {
+  flex-grow: 1;
 }
 
 .hero-text {
@@ -227,12 +239,16 @@ nav li:last-child {
 
 .centered {
   margin: auto;
-  max-width: 1200px;
+  max-width: 90%;
   box-sizing: border-box;
 }
 
 section {
   padding: 10px;
+}
+
+.green-text {
+  color: var(--darkgreen);
 }
 
 /* dialog */
@@ -365,10 +381,25 @@ footer {
   margin-top: 10px;
   padding: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
+  color: var(--brightyellow);
 }
 
-.footer-text {
-  color: var(--brightyellow);
+.footer-link {
+  display: flex;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  gap: 1ex;
+  align-items: center;
+}
+
+.footer-img {
+  height: 1.5em;
 }
