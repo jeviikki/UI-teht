@@ -3,6 +3,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
 :root {
   --main-border-radius: 20px;
   --bratgreen: #7cb518;
@@ -118,10 +123,16 @@ label {
 
 h1 {
   color: var(--darkgreen);
+  font-family: Saira;
 }
 
 h2 {
   color: var(--flameorange);
+  font-family: Saira;
+}
+
+h3 {
+  font-family: Saira;
 }
 
 p {
