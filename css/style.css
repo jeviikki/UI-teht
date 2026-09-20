@@ -20,13 +20,16 @@ body {
 
 @media screen and (max-width: 600px) {
   p,
-  span,
   input,
   label,
   button,
-  li a,
   h3 {
     font-size: 32px !important;
+  }
+  li,
+  li a,
+  span {
+    font-size: 28px !important;
   }
   h1 {
     font-size: 48px;
@@ -36,6 +39,11 @@ body {
   }
   .label-small {
     font-size: 24px !important;
+  }
+  .login-dialog-container {
+    display: block !important;
+    width: 100% !important;
+    overflow: hidden;
   }
   header {
     display: flex;
@@ -55,12 +63,18 @@ body {
   }
   .hero-img {
     flex-direction: column !important;
+    background-image:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../images/hero-mobile.png") !important;
   }
   .hero-left {
     width: 100% !important;
   }
   .centered {
-    max-width: 600px !important;
+    max-width: 100% !important;
+  }
+  .pillerimenu {
+    flex-direction: column !important;
   }
   .pillerimenu li {
     font-size: 26px;
@@ -81,7 +95,7 @@ body {
   input[type="text"],
   [type="password"],
   [type="email"] {
-    padding: 10px;
+    width: 90% !important;
   }
   button,
   input[type="submit"] {
@@ -179,6 +193,7 @@ nav li:last-child {
   background-image:
     linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../images/hero.png");
+  background-color: var(--brightyellow);
   background-repeat: no-repeat;
   background-size: 100%;
   min-height: 250px;
@@ -189,15 +204,14 @@ nav li:last-child {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   gap: 10px;
 }
 
 .hero-left {
-  flex-grow: 1;
-}
-
-.hero-right {
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .hero-text {
@@ -367,7 +381,7 @@ input:invalid {
 }
 
 .esittely-teksti {
-  color: black !important;
+  color: black;
 }
 
 .zoomable-img:hover {
